@@ -1,7 +1,80 @@
 // SECTION category :: START
 
+mixin bfcmCategory(classMod, img, badge, title, info, descArr)
+  a.bfcm-category__box(href='#' class!= "bfcm-category__box-" + classMod title='')
+    .bfcm-category__box-head
+      .bfcm-category__box-image
+        img(src='img/' + img)
+    .bfcm-category__box-body
+      p.bfcm-category__box-badge!= badge
+      p.bfcm-category__box-title!= title
+      if(info)
+        p.bfcm-category__box-info!= info
+      each val, idx in descArr
+        p.bfcm-category__box-desc!= val
+
 section#bfcm-category.bfcm-category
+
+  p.bfcm-category__title TOYS
+
   .c-grid
-    .bfcm-category__wrapper
+    .bfcm-category__wrapper.bfcm-category__wrapper-1
+
+      .bfcm-category__box-wrapper
+        div
+          +bfcmCategory('1', 'sq1-min.jpg', 'BANWOOD BIKES', 'Free Helmet', '', ['Exclusively at The Tot,', 'Receive a free Banwood helmet with each bike purchase'])
+        div
+          +bfcmCategory('2', 'sq2-min.jpg', 'MILTON & GOOSE', '20% Off', '', ['Entire Collection'])
+        div
+          +bfcmCategory('3', 'sq3-min.jpg', 'Micro KickboarD', '20% Off', '', ['All Scooters'])
+        div
+          +bfcmCategory('4', 'sq4-min.jpg', 'RS-Barcelona', '10% Off ', '', ['Select Game Tables'])
+
+  p.bfcm-category__title APPAREL
+
+  .c-grid
+    .bfcm-category__wrapper.bfcm-category__wrapper-2
+
+      .bfcm-category__box-wrapper.bfcm-category__box-wrapper--full
+        div
+          +bfcmCategory('5', 'one_colomn_1_levis-min.jpg', 'LEVI’s', "30% Off Levi's Custom Jackets", 'Use code CUSTOM', ['Exclusively at The Tot. Exclusions apply. Ends Thursday, 11/28 11:59 pm CT.', 'Cannot be applied to a previous purchase. See site for details.'])
+        div
+          +bfcmCategory('6', 'one_colomn_2_app-min.jpg', 'FASHION APPAREL & ACCESSORIES', '40% Off', 'Use code THANKFUL', ['Exclusions apply. Ends Sunday, 12/1 11:59 pm CT.', 'Cannot be applied to a previous purchase.'])
+
+  p.bfcm-category__title GEAR
+
+  .c-grid
+    .bfcm-category__wrapper.bfcm-category__wrapper-3
+
+      .bfcm-category__box-wrapper
+        div
+          +bfcmCategory('7', 'sq9-min.jpg', 'NUNA', '$100 Off', '', ['Xxxxxxxxxxxx'])
+        div
+          +bfcmCategory('8', 'sq10-min.jpg', 'DOCKATOT', '20% Off', '', ['Entire Collection'])
+        div
+          +bfcmCategory('9', 'sq11-min.jpg', '4moms', '30% Off', '', ['All MamaRoos'])
+        div
+          +bfcmCategory('10', 'sq12-min.jpg', 'GB POCKIT', '$30 Off', '', ['Entire Collection'])
+        div
+          +bfcmCategory('11', 'sq13-min.jpg', 'STOKKE', '20%Off', '', ['Select Styles'])
+        div
+          +bfcmCategory('12', 'sq14-min.jpg', 'CYBEX', '20% Off', '', ['Select Car Seats'])
+        div
+          +bfcmCategory('13', 'sq15-min.jpg', 'CLEK', '20% Off', '', ['All Liing Car Seats'])
+        div
+          +bfcmCategory('14', 'sq16-min.jpg', 'BUGABOO', 'Take $150 Off', '', ['Purchase a Bugaboo Fox & Bugaboo Ant or Bugaboo Turtle by Nuna'])
+
+  p.bfcm-category__title home
+
+  .c-grid
+    .bfcm-category__wrapper.bfcm-category__wrapper-4
+
+      .bfcm-category__box-wrapper
+        div
+          +bfcmCategory('15', 'sq18-min.jpg', 'NOOK', 'Up To 20% Off', '', ['Select Styles'])
+        div
+          +bfcmCategory('16', 'sq19-min.jpg', 'BABYLETTO', '25% Off', '', ['Select Styles'])
+        div
+          +bfcmCategory('17', 'sq20-min.jpg', 'HALO', '20% Off', '', ['All Bassinets'])
 
 // SECTION category :: END
