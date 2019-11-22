@@ -45,6 +45,21 @@
     display: flex;
     flex-direction: column;
 
+    &.bfcm-category__box--rightCenter {
+      .bfcm-category__box-image {
+        img {
+          object-position: right center;
+        }
+      }
+    }
+    &.bfcm-category__box--LeftCenter {
+      .bfcm-category__box-image {
+        img {
+          object-position: left center;
+        }
+      }
+    }
+
     &:hover {
       img {
         transform: scale(1.1);
