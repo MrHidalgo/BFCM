@@ -1,10 +1,11 @@
 // SECTION category :: START
 
-mixin bfcmCategory(classMod, img, badge, title, info, descArr)
-  a.bfcm-category__box(href='#' class!= "bfcm-category__box-" + classMod title='')
+mixin bfcmCategory(classMod, href, img, badge, title, info, descArr)
+  a.bfcm-category__box(href!= href class!= "bfcm-category__box-" + classMod title='')
     .bfcm-category__box-head
       .bfcm-category__box-image
-        img(src='img/' + img)
+        img(src='img/' + img + '.jpg')
+        img(src='img/' + img + '-mobile.jpg')
     .bfcm-category__box-body
       p.bfcm-category__box-badge!= badge
       p.bfcm-category__box-title!= title
@@ -22,13 +23,13 @@ section#bfcm-category.bfcm-category
 
       .bfcm-category__box-wrapper
         div
-          +bfcmCategory('1', 'sq1-min.jpg', 'BANWOOD BIKES', 'Free Helmet', '', ['Exclusively at The Tot,', 'Receive a free Banwood helmet with each bike purchase'])
+          +bfcmCategory('1', 'https://www.thetot.com/shop/brand/banwood-bikes/', 'sq1-min', 'BANWOOD BIKES', 'Free Helmet', '', ['Exclusively at The Tot,', 'Receive a free Banwood helmet with each bike purchase'])
         div
-          +bfcmCategory('2', 'sq2-min.jpg', 'MILTON & GOOSE', '20% Off', '', ['Entire Collection'])
+          +bfcmCategory('2', 'https://www.thetot.com/shop/brand/milton-goose/', 'sq2-min', 'MILTON & GOOSE', '20% Off', '', ['Entire Collection'])
         div
-          +bfcmCategory('3', 'sq3-min.jpg', 'Micro KickboarD', '20% Off', '', ['All Scooters'])
+          +bfcmCategory('3', 'https://www.thetot.com/shop/brand/micro-kickboard/', 'sq3-min', 'Micro KickboarD', '20% Off', '', ['All Scooters'])
         div
-          +bfcmCategory('4', 'sq4-min.jpg', 'RS-Barcelona', '10% Off ', '', ['Select Game Tables'])
+          +bfcmCategory('4', 'https://www.thetot.com/shop/brand/rs-barcelona', 'sq4-min', 'RS-Barcelona', '10% Off ', '', ['Select Game Tables'])
 
   p.bfcm-category__title APPAREL
 
@@ -37,9 +38,9 @@ section#bfcm-category.bfcm-category
 
       .bfcm-category__box-wrapper.bfcm-category__box-wrapper--full
         div
-          +bfcmCategory('5 bfcm-category__box--rightCenter', 'one_colomn_1_levis-min.jpg', 'LEVI’s', "30% Off Levi's Custom Jackets", 'Use code CUSTOM', ['Exclusively at The Tot. Exclusions apply. Ends Thursday, 11/28 11:59 pm CT.', 'Cannot be applied to a previous purchase. See site for details.'])
+          +bfcmCategory('5', 'https://www.thetot.com/shop/brand/levis/', 'one_colomn_1_levis-min', 'LEVI’s', "30% Off Levi's Custom Jackets", 'Use code <span>CUSTOM</span>', ['Exclusively at The Tot. Exclusions apply. Ends Thursday, 11/28 11:59 pm CT.', 'Cannot be applied to a previous purchase. See site for details.'])
         div
-          +bfcmCategory('6', 'one_colomn_2_app-min.jpg', 'FASHION APPAREL & ACCESSORIES', '40% Off', 'Use code THANKFUL', ['Exclusions apply. Ends Sunday, 12/1 11:59 pm CT.', 'Cannot be applied to a previous purchase.'])
+          +bfcmCategory('6', 'https://www.thetot.com/product-category/apparel/', 'one_colomn_2_app-min', 'FASHION APPAREL & ACCESSORIES', '40% Off', 'Use code <span>THANKFUL</span>', ['Exclusions apply. Ends Sunday, 12/1 11:59 pm CT.', 'Cannot be applied to a previous purchase.'])
 
   p.bfcm-category__title GEAR
 
@@ -48,21 +49,21 @@ section#bfcm-category.bfcm-category
 
       .bfcm-category__box-wrapper
         div
-          +bfcmCategory('7', 'sq9-min.jpg', 'NUNA', '$100 Off', '', ['Xxxxxxxxxxxx'])
+          +bfcmCategory('7', 'https://www.thetot.com/shop/brand/nuna/', 'sq9-min', 'NUNA', '$100 Off', '', ['Xxxxxxxxxxxx'])
         div
-          +bfcmCategory('8', 'sq10-min.jpg', 'DOCKATOT', '20% Off', '', ['Entire Collection'])
+          +bfcmCategory('8', 'https://www.thetot.com/shop/brand/dockatot/', 'sq10-min', 'DOCKATOT', '20% Off', '', ['Entire Collection'])
         div
-          +bfcmCategory('9', 'sq11-min.jpg', '4moms', '30% Off', '', ['All MamaRoos'])
+          +bfcmCategory('9', 'https://www.thetot.com/shop/brand/4moms/', 'sq11-min', '4moms', '30% Off', '', ['All MamaRoos'])
         div
-          +bfcmCategory('10', 'sq12-min.jpg', 'GB POCKIT', '$30 Off', '', ['Entire Collection'])
+          +bfcmCategory('10', 'https://www.thetot.com/shop/brand/gb/', 'sq12-min', 'GB POCKIT', '$30 Off', '', ['Entire Collection'])
         div
-          +bfcmCategory('11', 'sq13-min.jpg', 'STOKKE', '20%Off', '', ['Select Styles'])
+          +bfcmCategory('11', 'https://www.thetot.com/shop/brand/stokke/', 'sq13-min', 'STOKKE', '20%Off', '', ['Select Styles'])
         div
-          +bfcmCategory('12', 'sq14-min.jpg', 'CYBEX', '20% Off', '', ['Select Car Seats'])
+          +bfcmCategory('12', 'https://www.thetot.com/shop/brand/cybex/', 'sq14-min', 'CYBEX', '20% Off', '', ['Select Car Seats'])
         div
-          +bfcmCategory('13', 'sq15-min.jpg', 'CLEK', '20% Off', '', ['All Liing Car Seats'])
+          +bfcmCategory('13', 'https://www.thetot.com/shop/brand/clek/', 'sq15-min', 'CLEK', '20% Off', '', ['All Liing Car Seats'])
         div
-          +bfcmCategory('14', 'sq16-min.jpg', 'BUGABOO', 'Take $150 Off', '', ['Purchase a Bugaboo Fox & Bugaboo Ant or Bugaboo Turtle by Nuna'])
+          +bfcmCategory('14', 'https://www.thetot.com/shop/brand/bugaboo/', 'sq16-min', 'BUGABOO', 'Take $150 Off', '', ['Purchase a Bugaboo Fox & Bugaboo Ant or Bugaboo Turtle by Nuna'])
 
   p.bfcm-category__title home
 
@@ -71,10 +72,10 @@ section#bfcm-category.bfcm-category
 
       .bfcm-category__box-wrapper
         div
-          +bfcmCategory('15', 'sq18-min.jpg', 'NOOK', 'Up To 20% Off', '', ['Select Styles'])
+          +bfcmCategory('15', '#', 'sq18-min', 'NOOK', 'Up To 20% Off', '', ['Select Styles'])
         div
-          +bfcmCategory('16', 'sq19-min.jpg', 'BABYLETTO', '25% Off', '', ['Select Styles'])
+          +bfcmCategory('16', 'https://www.thetot.com/shop/brand/babyletto/', 'sq19-min', 'BABYLETTO', '25% Off', '', ['Select Styles'])
         div
-          +bfcmCategory('17', 'sq20-min.jpg', 'HALO', '20% Off', '', ['All Bassinets'])
+          +bfcmCategory('17', 'https://www.thetot.com/shop/brand/halo/', 'sq20-min', 'HALO', '20% Off', '', ['All Bassinets'])
 
 // SECTION category :: END
