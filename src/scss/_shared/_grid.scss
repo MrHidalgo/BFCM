@@ -1,0 +1,35 @@
+///
+/// ADDITIONALLY
+/// ===============
+$maxWidth: 1272px;
+$paddingLeft: 15px;
+$paddingRight: $paddingLeft;
+
+%grid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $paddingRight;
+  padding-left: $paddingLeft;
+  @include adaptive(767) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+///
+/// MAIN
+/// ===============
+.c-grid {
+  @extend %grid;
+  @if($maxWidth) {
+    max-width: $maxWidth;
+  }
+
+
+  &-fluid {
+    @extend %grid;
+    max-width: 100%;
+  }
+}

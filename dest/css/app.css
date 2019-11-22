@@ -1,0 +1,433 @@
+@font-face {
+  font-family: "DidotLTPro";
+  src: url("../fonts/DidotLTPro-Roman.woff2") format("woff2"), url("../fonts/DidotLTPro-Roman.woff") format("woff"), url("../fonts/DidotLTPro-Roman.ttf") format("truetype"), url("../fonts/DidotLTPro-Roman.svg#DidotLTPro") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg#ProximaNova") format("svg");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Regular.woff2") format("woff2"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg#ProximaNova") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 1, src/scss/_shared/_main-setting-reset.scss */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 8, src/scss/_shared/_main-setting-reset.scss */
+html {
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 14, src/scss/_shared/_main-setting-reset.scss */
+body {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  line-height: 1.42857143;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "ProximaNova", "DidotLTPro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 28, src/scss/_shared/_main-setting-reset.scss */
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+/* line 33, src/scss/_shared/_main-setting-reset.scss */
+body > .body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+/* line 39, src/scss/_shared/_main-setting-reset.scss */
+body > .body--start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 46, src/scss/_shared/_main-setting-reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 49, src/scss/_shared/_main-setting-reset.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 56, src/scss/_shared/_main-setting-reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 66, src/scss/_shared/_main-setting-reset.scss */
+button,
+input {
+  overflow: visible;
+}
+
+/* line 72, src/scss/_shared/_main-setting-reset.scss */
+button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* line 78, src/scss/_shared/_main-setting-reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 84, src/scss/_shared/_main-setting-reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 90, src/scss/_shared/_main-setting-reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 95, src/scss/_shared/_main-setting-reset.scss */
+p,
+h1, h2, h3, h4, h5, h6,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 103, src/scss/_shared/_main-setting-reset.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 108, src/scss/_shared/_main-setting-reset.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 114, src/scss/_shared/_main-setting-reset.scss */
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 119, src/scss/_shared/_main-setting-reset.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 126, src/scss/_shared/_main-setting-reset.scss */
+input[type="text"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* line 8, src/scss/_shared/_grid.scss */
+.c-grid, .c-grid-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 8, src/scss/_shared/_grid.scss */
+  .c-grid, .c-grid-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 24, src/scss/_shared/_grid.scss */
+.c-grid {
+  max-width: 1272px;
+}
+
+/* line 31, src/scss/_shared/_grid.scss */
+.c-grid-fluid {
+  max-width: 100%;
+}
+
+/* line 3, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner {
+  padding-top: 68px;
+  padding-bottom: 25px;
+}
+
+/* line 7, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__subtitle {
+  padding-bottom: 9px;
+  color: #797979;
+  letter-spacing: 3.3px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 7, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__subtitle {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 7, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__subtitle {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 11px;
+  }
+}
+
+/* line 25, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__title {
+  padding-bottom: 55px;
+  color: #000;
+  font-size: 66px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+  font-family: "DidotLTPro", sans-serif;
+  line-height: 1.015;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 25, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__title {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 25, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__title {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    font-size: 44px;
+  }
+}
+
+/* line 46, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #fff;
+}
+
+/* line 52, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 350px;
+  padding: 12px;
+  background-color: #941013;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 52, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-wrapper {
+    height: auto;
+  }
+}
+
+/* line 63, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-cover {
+  width: 100%;
+  padding: 43px 15px 35px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 63, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-cover {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* line 73, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-subtitle {
+  padding-bottom: 37px;
+  color: #ffffff;
+  letter-spacing: 2.7px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 73, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 73, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-subtitle {
+    padding-bottom: 20px;
+    font-size: 11px;
+  }
+}
+
+/* line 89, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-sale, .bfcm-banner__box-title {
+  font-family: 'DidotLTPro', sans-serif;
+  color: #ffffff;
+  font-size: 53px;
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 89, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-sale, .bfcm-banner__box-title {
+    font-size: 47px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 89, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-sale, .bfcm-banner__box-title {
+    font-size: 31px;
+  }
+}
+
+/* line 104, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-title {
+  padding-bottom: 9px;
+}
+
+/* line 108, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-detail {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 108, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-detail {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 108, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-detail {
+    font-size: 14px;
+  }
+}
+
+/* line 119, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-detail span {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* line 125, src/scss/_components/homepage/_banner.scss */
+.bfcm-banner__box-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 125, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-info {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 125, src/scss/_components/homepage/_banner.scss */
+  .bfcm-banner__box-info {
+    position: static;
+    padding-bottom: 5px;
+    font-size: 13px;
+  }
+}
+
+/* line 3, src/scss/_components/homepage/_category.scss */
+.bfcm-category {
+  padding-top: 30px;
+}
+
+/*# sourceMappingURL=maps/app.css.map */

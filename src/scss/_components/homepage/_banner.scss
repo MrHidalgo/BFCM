@@ -1,0 +1,150 @@
+// SECTION banner :: START
+
+.bfcm-banner {
+  padding-top: 68px;
+  padding-bottom: 25px;
+
+  &__subtitle {
+    padding-bottom: 9px;
+    color: #797979;
+    letter-spacing: 3.3px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    @include adaptive(1279) {
+      font-size: 13px;
+    }
+    @include adaptive(767) {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 11px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 55px;
+    color: #000;
+    font-size: 66px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    font-family: "DidotLTPro", sans-serif;
+    line-height: 1.015;
+    text-align: center;
+    text-transform: uppercase;
+    @include adaptive(1279) {
+      font-size: 56px;
+    }
+    @include adaptive(767) {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 40px;
+      font-size: 44px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 6px solid #fff;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      height: 350px;
+      padding: 12px;
+      background-color: #941013;
+      @include adaptive(767) {
+        height: auto;
+      }
+    }
+
+    &-cover {
+      width: 100%;
+      padding: 43px 15px 35px;
+      text-align: center;
+      @include adaptive(767) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    &-subtitle {
+      padding-bottom: 37px;
+      color: #ffffff;
+      letter-spacing: 2.7px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      @include adaptive(1279) {
+        font-size: 14px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 20px;
+        font-size: 11px;
+      }
+    }
+
+    &-sale,
+    &-title {
+      font-family: 'DidotLTPro', sans-serif;
+      color: #ffffff;
+      font-size: 53px;
+      font-weight: 500;
+      line-height: 0.9;
+      @include adaptive(1279) {
+        font-size: 47px;
+      }
+      @include adaptive(767) {
+        font-size: 31px;
+      }
+    }
+
+    &-title {
+      padding-bottom: 9px;
+    }
+
+    &-detail {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: bold;
+      @include adaptive(1279) {
+        font-size: 18px;
+      }
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+
+      span {
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      color: rgba(#fff, 0.6);
+      letter-spacing: 0.5px;
+      @include adaptive(1279) {
+        font-size: 15px;
+      }
+      @include adaptive(767) {
+        position: static;
+        padding-bottom: 5px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// SECTION banner :: END
